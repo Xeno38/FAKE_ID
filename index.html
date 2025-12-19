@@ -1,1 +1,28 @@
-<h1>TEST</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+</head>
+<body>
+    <link> href="setting.html" </link>
+  
+    <h1>Page d'accueil</h1>
+
+    <h2>Image sauvegardée :</h2>
+    <img id="savedImage" style="max-width: 500px; max-height: 500px;" alt="Aucune image disponible" />
+
+    <script>
+        const savedImage = document.getElementById('savedImage');
+        const imageData = localStorage.getItem('imageData');
+        
+        if (imageData) {
+            savedImage.src = imageData;
+        } else {
+            savedImage.alt = 'Aucune image téléchargée.';
+        }
+    </script>
+
+</body>
+</html>
